@@ -1,0 +1,229 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape Pranav Goyanka} \\ \vspace{1pt}
+    \small Boston, MA $|$
+    \small 774-284-6311 $|$ \href{mailto:pgoyanka@gmail.com}{\underline{pgoyanka@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/pranavgoyanka/}{\underline{linkedin.com/in/pranavgoyanka/}} $|$
+    \href{https://github.com/pranavgoyanka/}{\underline{github.com/pranavgoyanka}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Boston University}{Boston, MA}
+      {MS in Computer Science $|$ GPA: 3.78/4.00 }{Sep 2023 -- Dec 2024}
+      \resumeItem{Courses: Principles of Machine Learning, Tools for Data Science, Distributed Systems}
+    \resumeSubheading
+      {Thapar Institute of Engineering and Technology}{India}
+      {BE in Electronics and Communication Engineering $|$ CGPA: 8.84/10.00 }{Jul 2017 -- Jun 2021}
+      \resumeItem{Courses: Data Structures and Algorithms, Operating Systems}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Golang, Typescript, Javascript, C++, Python, Java,  SQL, HTML/CSS} \\
+     \textbf{Tools \& Frameworks}{: Pytorch, scikit-learn, Node.js, AWS, Redis, Socket.IO, Websocket, RESTful API, Git, Linux} \\
+     % \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
+     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+          {Teaching Assistant and Course Designer}{Jan 2024 -- Present}
+          {Boston University}{Boston, MA}
+          \resumeItemListStart
+      \resumeItem{ Teaching Assistant for Boston University's course: CS350 - Distributed Systems}
+       \resumeItem{ Held weekly lab sessions and office hours, helping students build distributed systems using Golang.}
+       \resumeItem{ Produced programming assignments and grading infrastructure for CS350 and the upcoming course CS351}
+       \resumeItem{ Implemented the OmniPaxos consensus protol in Golang, to overcome the limitations of Raft.}
+          \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Development Engineer}{Oct 2022 -- Jul 2023}
+      {Mobile Premier League}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{ Engineered backend systems and centralized libraries for NodeJS based server-authoritative games.}
+  \resumeItem{ Optimised infrastructure utilization and monitoring via centralized libraries and OpenTelemetry integration, resulting in a 40\% reduction in infrastructure costs.}
+   \resumeItem{ Improved existing matchmaking systems, leading to a 70\% increase in user engagement and retention.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Software Development Engineer}{Aug 2021 - Oct 2022}
+      {Amadeus Software Labs}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Built a Splunk Dashboard for Functional Monitoring and FMEA, cutting manual tasks by 50\%.}
+        \resumeItem{Resolved daily incidents promptly in the C++ based Back Office Tool, resulting in a 40\% incident reduction.}
+        \resumeItem{Rectified malfunctioning SQL database purge scripts, reducing disk space usage over 90\%.}
+    \resumeItemListEnd
+
+   \resumeSubSubheading
+    {Software Engineering Intern}{Jan 2021 - May 2021}
+    \resumeItemListStart
+       \resumeItem{Created 'Chatbot as a Service', a modular framework to reduce chatbot development effort by more than 50\%.}
+         \resumeItem{Developed standalone Java libraries for Google Dialogflow and IBM Watson’s NLP APIs, and MongoDB.}
+        \resumeItem{Released the libraries to the internal Maven Repository, used by other chatbot teams at Amadeus.}
+    \resumeItemListEnd
+
+      \resumeSubheading
+      {\href{https://summerofcode.withgoogle.com/archive/2020/projects/5793865656696832}{\underline{\textbf{Student Developer}}}}{Jun 2020 - Aug 2020}
+      {Google Summer of Code at AOSSIE}{Remote}
+      \resumeItemListStart
+        \resumeItem{Contributed to the 'Social Street Smart' project aimed at combating fake information on the internet.}
+        \resumeItem{Developed a JavaScript API\textbf{ }to detect disinformation in images using the Google Images API.}
+        \resumeItem{Deployed serverless Machine Learning models and APIs based on Python-Flask to AWS Lambda.}
+        \resumeItem{Migrated APIs built using Tensorflow to TFLite, making them AWS Lambda compatible.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          { \href{https://github.com/pranavgoyanka/cs542-common-task}{\underline{\textbf{Automated Trading System}}} $|$ \emph{Python, TensorFlow, scikit-learn}}{Mar 2024 - Apr 2024}
+          \resumeItemListStart
+            \resumeItem{Built LSTM models to predict daily temperatures for four cities using multi-source weather data.}
+            \resumeItem{Created an automated trading system with Kalshi Python API, earning \$1,887 profit.}
+            \resumeItem{Collected, cleaned, and processed weather data from four sources via APIs for model training.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Fault Tolerant Key Value Store} $|$ \emph{Golang, Raft Consensus Algorithm}}{Oct 2023 - Nov 2023}
+          \resumeItemListStart
+            \resumeItem{Implemented the Raft distributed consensus algorithm using Go, with snapshotting support.}
+            \resumeItem{Built a key value store that uses Raft as the underlying protocol.}
+            \resumeItem{Tested the system against various network and node failures to ensure fault tolerance.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+
+%-------------------------------------------
+\end{document}
