@@ -4,3 +4,5 @@
 *.log
 *.out
 *.synctex.gz
+*.tmp.driveupload
+*.DS_Store
