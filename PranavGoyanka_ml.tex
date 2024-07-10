@@ -151,7 +151,7 @@
       \resumeItem{ Assisted in CS350 - Distributed Systems course, conducting weekly lab sessions and office hours.}
       %  \resumeItem{ Held weekly lab sessions and office hours, helping students build distributed systems using Golang.}
        \resumeItem{ Designed programming assignments and grading infrastructure for the course.}
-       \resumeItem{ Implemented the OmniPaxos consensus protocol in Golang to overcome Raft limitations.}
+       \resumeItem{ Implemented the OmniPaxos consensus protocol in Golang to overcome Raft's partial connectivity limitations.}
           \resumeItemListEnd
 
     \resumeSubheading
@@ -216,24 +216,23 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-    \resumeProjectHeading
-        { \href{https://github.com/CASP-Systems-BU/flink-on-the-edge}{\underline{\textbf{
-          Operator Placement on the Edge in Apache Flink}}} $|$ \emph{Flink, Edge Compute}}{Feb 2024 - May 2024}
-        \resumeItemListStart
-          \resumeItem{Enhanced Flink to dynamically move operators to edge devices to reduce network congestion.}
-          \resumeItem{Automatically generated placement plans for user queries.}
-          \resumeItem{Developed a prototype query re-writer using code generation to support any user-defined query.
-          }
-        \resumeItemListEnd
-
       \resumeProjectHeading
-      { \href{https://github.com/pranavgoyanka/cs542-common-task}{\underline{\textbf{Automated Trading System}}} $|$ \emph{Python, TensorFlow, scikit-learn}}{Mar 2024 - Apr 2024}
-      \resumeItemListStart
-        \resumeItem{Built LSTM models to predict daily temperatures for four cities using multi-source weather data.}
-        \resumeItem{Created an automated trading system with Kalshi Python API, earning \$1,887 profit.}
-        \resumeItem{Collected, cleaned, and processed weather data from four sources via APIs for model training.}
-      \resumeItemListEnd
-      \resumeSubHeadingListEnd
+          { \href{https://github.com/pranavgoyanka/cs542-common-task}{\underline{\textbf{Automated Trading System}}} $|$ \emph{Python, TensorFlow, scikit-learn}}{Mar 2024 - Apr 2024}
+          \resumeItemListStart
+            \resumeItem{Built LSTM models to predict daily temperatures for four cities using multi-source weather data.}
+            \resumeItem{Created an automated trading system with Kalshi Python API, earning \$1,887 profit.}
+            \resumeItem{Collected, cleaned, and processed weather data from four sources via APIs for model training.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Fault Tolerant Key Value Store} $|$ \emph{Golang, Raft Consensus Algorithm}}{Oct 2023 - Nov 2023}
+          \resumeItemListStart
+            \resumeItem{Implemented the Raft distributed consensus algorithm using Go, with snapshotting support.}
+            \resumeItem{Built a key value store that uses Raft as the underlying protocol.}
+            \resumeItem{Tested the system against various network and node failures to ensure fault tolerance.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
 
 %
 
