@@ -104,136 +104,20 @@
 
 
 \begin{document}
+\input{resume_sections/heading.tex}
 
-%----------HEADING----------
+\input{resume_sections/education.tex}
 
-\begin{center}
-    \textbf{\Huge \scshape Pranav Goyanka} \\ \vspace{1pt}
-    \small Boston, MA $|$
-    \small 774-284-6311 $|$ \href{mailto:pgoyanka@gmail.com}{\underline{pgoyanka@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/pranavgoyanka/}{\underline{linkedin.com/in/pranavgoyanka/}} $|$
-    \href{https://github.com/pranavgoyanka/}{\underline{github.com/pranavgoyanka}}
-\end{center}
+\input{resume_sections/skills/skills.tex}
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Boston University \textnormal{\emph{$|$ Graduate School of Arts and Sciences}}}{Boston, MA}
-      {MS in Computer Science $|$ GPA: 3.78/4.00 }{Sep 2023 -- Dec 2024}
-      \resumeItem{Courses: Principles of Machine Learning, Distributed Systems, Tools for Data Science}
-    \resumeSubheading
-      {Thapar Institute of Engineering and Technology}{Patiala, India}
-      {BE in Electronics and Communication Engineering $|$ CGPA: 8.84/10.00 }{Jul 2017 -- Jun 2021}
-      \resumeItem{Courses: Data Structures and Algorithms, Operating Systems}
-  \resumeSubHeadingListEnd
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Programming Languages}{: Golang, Typescript, Javascript, C++, Python, Java,  SQL, HTML/CSS} \\
-     \textbf{Frameworks}{: Pytorch, TensorFlow, Node.js, Socket.IO, Websocket, OpenTelemetry } \\
-     \textbf{Tools \& Libraries}{: Redis, scikit-learn, AWS, RESTful API, Git, Linux} \\
-     % \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     % \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-          {Teaching Assistant \& Course Designer \textnormal{\emph{$|$ Distributed Systems (CS350 \& CS351)}}}{Jan 2024 -- Present}
-          {Boston University}{Boston, MA}
-          \resumeItemListStart
-          \resumeItem{ Implemented the OmniPaxos consensus protocol in Golang to overcome Raft's partial connectivity limitations.}
-          %  \resumeItem{ Held weekly lab sessions and office hours, helping students build distributed systems using Golang.}
-          \resumeItem{ Designed programming assignments and grading infrastructure for the course.}
-          \resumeItem{ Assisted Prof. John Liagouris in conducting weekly lab sessions and office hours.}
-          \resumeItemListEnd
-
-    \resumeSubheading
-      {Software Development Engineer}{Oct 2022 -- Jul 2023}
-      {Mobile Premier League}{Bangalore, India}
-      \resumeItemListStart
-        \resumeItem{ Engineered backend systems and centralized libraries for NodeJS based server-authoritative games.}
-        \resumeItem{ Optimised infrastructure utilization and monitoring via centralized libraries and OpenTelemetry integration, resulting in a 40\% reduction in infrastructure costs.}
-        \resumeItem{ Improved existing matchmaking systems, leading to a 70\% increase in user engagement and retention.}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Software Development Engineer}{Aug 2021 - Oct 2022}
-      {Amadeus Software Labs}{Bangalore, India}
-      \resumeItemListStart
-        \resumeItem{Built a Splunk Dashboard for Functional Monitoring and FMEA, cutting manual tasks by 50\%.}
-        \resumeItem{Rectified malfunctioning SQL database purge scripts, reducing disk space usage over 90\%.}
-        \resumeItem{Resolved daily incidents promptly in the C++ based Back Office Tool, resulting in a 40\% incident reduction.}
-    \resumeItemListEnd
-    
-    \resumeSubheading
-    {Software Engineering Intern}{Jan 2021 - May 2021}
-      {Amadeus Software Labs}{Bangalore, India}
-      \resumeItemListStart
-       \resumeItem{Created 'Chatbot as a Service', a modular framework to reduce chatbot development effort by more than 50\%.}
-         \resumeItem{Developed standalone Java libraries for Google Dialogflow and IBM Watson’s NLP APIs, and MongoDB.}
-        \resumeItem{Released the libraries to the internal Maven Repository, used by other chatbot teams at Amadeus.}
-    \resumeItemListEnd
-
-  % Not using SubSubheading because Workday doesn't parse it properly
-  %  \resumeSubSubheading
-  %   {Software Engineering Intern}{Jan 2021 - May 2021}
-  %   \resumeItemListStart
-  %      \resumeItem{Created 'Chatbot as a Service', a modular framework to reduce chatbot development effort by more than 50\%.}
-  %        \resumeItem{Developed standalone Java libraries for Google Dialogflow and IBM Watson’s NLP APIs, and MongoDB.}
-  %       \resumeItem{Released the libraries to the internal Maven Repository, used by other chatbot teams at Amadeus.}
-  %   \resumeItemListEnd
-
-      \resumeSubheading
-      {\href{https://summerofcode.withgoogle.com/archive/2020/projects/5793865656696832}{\underline{\textbf{Student Developer}}}}{Jun 2020 - Aug 2020}
-      {Google Summer of Code at AOSSIE}{Remote}
-      \resumeItemListStart
-      \resumeItem{Contributed to the project 'Social Street Smart' for combating fake information on the internet.}
-      \resumeItem{Created and deployed serverless Machine Learning models and APIs for fake news detection.}
-      \resumeItem{Migrated TensorFlow Machine Learning models to lightweight TFLite models \& deployed them to AWS Lambda.}
-      \resumeItem{Developed a JavaScript API to detect disinformation in images using the Google Images API.}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
+\input{resume_sections/experience.tex}
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-          { \href{https://github.com/pranavgoyanka/cs542-common-task}{\underline{\textbf{Automated Trading System}}} $|$ \emph{Python, TensorFlow, scikit-learn}}{Mar 2024 - Apr 2024}
-          \resumeItemListStart
-            \resumeItem{Built LSTM models to predict daily temperatures for four cities using multi-source weather data.}
-            \resumeItem{Created an automated trading system with Kalshi Python API, earning \$1,887 profit.}
-            \resumeItem{Collected, cleaned, and processed weather data from four sources via APIs for model training.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Fault Tolerant Key Value Store} $|$ \emph{Golang, Raft Consensus Algorithm}}{Oct 2023 - Nov 2023}
-          \resumeItemListStart
-            \resumeItem{Implemented the Raft distributed consensus algorithm using Go, with snapshotting support.}
-            \resumeItem{Built a key value store that uses Raft as the underlying protocol.}
-            \resumeItem{Tested the system against various network and node failures to ensure fault tolerance.}
-          \resumeItemListEnd
+    \input{resume_sections/projects/fault_tolerant_kv_raft.tex}
+    \input{resume_sections/projects/automated_trading_system.tex}
     \resumeSubHeadingListEnd
-
-
-
 %
 
 %-------------------------------------------
