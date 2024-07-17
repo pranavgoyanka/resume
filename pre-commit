@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# List of LaTeX files to compile
+TEX_FILES=("PranavGoyanka_sde.tex" "PranavGoyanka_ml.tex" "PranavGoyanka_streaming.tex")
+
+# Function to compile a LaTeX file
+compile_latex() {
+  TEX_FILE=$1
+  OUTPUT_DIR="PDFs"
+  PDF_FILE="PDFs/${TEX_FILE%.tex}.pdf"
+
+  echo "Compiling $TEX_FILE..."
+
+  # Run pdflatex to compile the LaTeX file
+  pdflatex -interaction=nonstopmode -output-directory "$OUTPUT_DIR" "$TEX_FILE" > /dev/null 2>&1
+  RESULT=$?
+
+  # Check if pdflatex was successful
+  if [ $RESULT -ne 0 ]; then
+    echo "pdflatex compilation failed for $TEX_FILE. Commit aborted."
+    exit 1
+  fi
+
+  # Check if the PDF file was generated
+  if [ ! -f "$PDF_FILE" ]; then
+    echo "PDF file not found for $TEX_FILE. Commit aborted."
+    exit 1
+  fi
+
+  echo "pdflatex compilation successful for $TEX_FILE. => $PDF_FILE"
+
+  # Stage the PDF file for commit
+  git add "$PDF_FILE"
+  if [ $? -ne 0 ]; then
+    echo "Failed to add $PDF_FILE to commit. Commit aborted."
+    exit 1
+  fi
+}
+
+# Iterate over the list of LaTeX files and compile each one
+for TEX_FILE in "${TEX_FILES[@]}"; do
+  compile_latex "$TEX_FILE"
+done
+
+echo "All LaTeX files compiled and staged successfully. Proceeding with commit."
+
+exit 0
+
