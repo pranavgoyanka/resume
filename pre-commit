@@ -2,11 +2,11 @@
 
 # List of LaTeX files to compile
 TEX_FILES=("PranavGoyanka_sde.tex" "PranavGoyanka_ml.tex" "PranavGoyanka_streaming.tex")
+OUTPUT_DIR="PDFs"
 
 # Function to compile a LaTeX file
 compile_latex() {
   TEX_FILE=$1
-  OUTPUT_DIR="PDFs"
   PDF_FILE="PDFs/${TEX_FILE%.tex}.pdf"
 
   echo "Compiling $TEX_FILE..."
@@ -37,10 +37,17 @@ compile_latex() {
   fi
 }
 
+cleanup() {
+  echo "Cleaning up temp files..."
+  find "$OUTPUT_DIR"  -type f ! -name "*.pdf" -exec rm {} \;
+}
+
 # Iterate over the list of LaTeX files and compile each one
 for TEX_FILE in "${TEX_FILES[@]}"; do
   compile_latex "$TEX_FILE"
 done
+
+cleanup
 
 echo "All LaTeX files compiled and staged successfully. Proceeding with commit."
 
