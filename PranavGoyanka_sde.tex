@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome}
 \input{glyphtounicode}
 
 
@@ -106,19 +107,19 @@
 \begin{document}
 \input{resume_sections/heading.tex}
 
-\input{resume_sections/education.tex}
-
 \input{resume_sections/skills/skills.tex}
 
 \input{resume_sections/experience.tex}
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
-      \input{resume_sections/projects/rag_for_md.tex}
-      \input{resume_sections/projects/fault_tolerant_kv_raft.tex}
-    \resumeSubHeadingListEnd
-%
+  \resumeSubHeadingListStart
+    \input{resume_sections/projects/rag_for_md.tex}
+    \input{resume_sections/projects/automated_trading_system.tex}
+    \input{resume_sections/projects/fault_tolerant_kv_raft.tex}
+  \resumeSubHeadingListEnd
+
+\input{resume_sections/education.tex}
 
 %-------------------------------------------
 \end{document}
